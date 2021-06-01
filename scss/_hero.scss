@@ -1,0 +1,54 @@
+.hero {
+    width: 100vw;
+    height: 42rem;
+    flex-direction: column;
+
+    &__image {
+        max-width: 26.6875rem;
+        max-height: 26.6875rem;
+        border-radius: 18.75rem;
+        background-color: $grey;
+
+        img {
+            max-width: 20rem;
+            border-radius: 18.75rem;
+        }
+    }
+
+    &__header {
+        flex-direction: column;
+        max-width: 20rem;
+        h1 {
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 0.625rem;
+            font-size: 2rem;
+            color: $white;
+            font-family: $font-header;
+            text-align: center;
+        }
+
+        p {
+            margin: 0;
+            font-size: 1.2rem;
+            color: $white;
+            width: 25rem;
+            text-align: center;
+        }
+    }
+
+    &__resume {
+        max-width: 20rem;
+        max-height: 10rem;
+        .button{
+            width: 15rem;
+            height: 2rem;
+            margin: 15px 0;
+            background-color: $green;
+            color: $black;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+    }
+}

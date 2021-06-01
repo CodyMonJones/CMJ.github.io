@@ -1,0 +1,49 @@
+.skills {
+    height: 37.5rem;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 3.125rem;
+
+    &__header {
+        flex-direction: column;
+        font-size: 1.2rem;
+        
+        h1 {
+            margin-bottom: 0;
+            text-transform: uppercase;
+        }
+
+        >span {
+            width: 7.5rem;
+            height: 0.125rem;
+            background: $green;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__icons {
+        display: grid;
+        gap: 0.9375rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        height: 100%;
+        
+        
+        @include breakpoint-down(medium){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        div {
+            width: 12.5rem;
+            min-height: 100%;
+            border-radius: 0.625rem;
+        }
+
+        i {
+            padding: 0.625rem 0.1875rem;
+            color: $green;
+            font-size: 7rem;
+        }
+    }
+}
