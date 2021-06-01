@@ -189,7 +189,7 @@ form.addEventListener('input', e => {
             validateEmail();
             break;
         
-        case 'user-number':
+        case 'number':
             validateNumber();
             break;
         
