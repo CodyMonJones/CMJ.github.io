@@ -1,11 +1,9 @@
 //MAP STYLE AND FUNCTIONS
 let marker;
 function initMap() {
-    map = new google.maps.Map(document.getElementById("map"), {
+    let map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 32.762688, lng:  -97.010441 },
         zoom: 10,
-        gestureHandling: 'none',
-        zoomControl: false,
         mapId: '83b5a3fb03b81e32',
     });
     marker = new google.maps.Marker({
@@ -79,8 +77,8 @@ form.addEventListener('submit', e => {
     let validForm = validUser && validEmail && validNumber && validMessage;
 
     if (validForm) {
-        alert("Form has been submitted");
-        formReset();
+        overlay.classList.add("active");
+        form.reset()
     }
 });
 
@@ -198,4 +196,14 @@ form.addEventListener('input', e => {
             break;
     }
 });
+
+//MODAL FUNCTIONS 
+
+const closeBtn = document.querySelector(".fa-times-circle");
+const overlay = document.querySelector(".contact__modalOL");
+
+closeBtn.addEventListener('click', () => {
+    overlay.classList.remove("active");
+})
+
 

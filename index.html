@@ -22,7 +22,6 @@
             </a>
 
             <div class="header__links hide-for-mobile mobile-menu-display">
-                <a href="#">Home</a>
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#">Projects</a>
@@ -31,7 +30,6 @@
         </nav>
 
         <div class="header__mobmenu hide-for-desktop flex flex-jc-se flex-ai-c container">
-            <a class="mobile_links" href="#">Home</a>
             <a class="mobile_links" href="#about">About</a>
             <a class="mobile_links" href="#skills">Skills</a>
             <a class="mobile_links" href="#">Projects</a>
@@ -43,12 +41,14 @@
         <div class="hero__image flex flex-jc-c flex-ai-c">
             <img src="images/cody.png" alt="cody">
         </div>
+
         <div class="hero__header flex flex-ai-c">
             <h1>Cody Jones</h1>
             <p>Student | Aspiring Developer | Veteran</p>
         </div>
+
         <div class="hero__resume flex flex-jc-c flex-ai-c">
-            <a href="#" class="button flex flex-jc-c flex-ai-c">Resume</a>
+            <a href="resume.html" class="button flex flex-jc-c flex-ai-c">Resume <i class="fas fa-file-alt"></i></a>
         </div>
     </section>
     <!-- ABOUT SECTION -->
@@ -59,13 +59,13 @@
             <p>Hi, I'm Cody. I'm a Navy Veteran and student based out of Dallas,TX who is obsessed with learning. Whenever I'm not behind my computer working on a new skill you can usually catch me at the gym, hanging out with my friends or spending time with my girlfriend. In the future I hope to be part of a great team of Software Engineers/Developers and have the opportunity to work on some incredible projects while continuing to grow as a person.</p>
         </div>
     </section>
-    <script src="app.js"></script>
     <!-- SKILLS SECTION -->
     <section class="skills flex" id="skills">
         <div class="skills__header container flex flex-ai-c flex-jc-c">
             <h1>Technical Skills</h1>
             <span></span>
         </div>
+
         <div class="skills__icons container flex flex-ai-c flex-jc-c">
             <div class="flex flex-ai-c flex-jc-c">
                 <i class="fab fa-html5"></i>
@@ -94,7 +94,7 @@
             <span></span>
         </div>
         <div class="contact__wrapper container flex flex-jc-sb flex-ai-c">
-            <form action="#" class="contact__form flex flex-jc-se flex-ai-c">
+            <form action="submit" class="contact__form flex flex-jc-se flex-ai-c">
                 <div class="input">
                     <label for="name">Name:</label>
                     <input type="text" id="name">
@@ -102,6 +102,7 @@
                     <i class="fas fa-exclamation"></i>
                     <small></small>
                 </div>
+
                 <div class="input">
                     <label for="email">Email:</label>
                     <input type="text" id="email">
@@ -109,6 +110,7 @@
                     <i class="fas fa-exclamation"></i>
                     <small></small>
                 </div>
+
                 <div class="input">
                     <label for="number">Number:</label>
                     <input type="text" id="number">
@@ -116,6 +118,7 @@
                     <i class="fas fa-exclamation"></i>
                     <small></small>
                 </div>
+
                 <div class="input">
                     <label for="message">Message:</label>
                     <textarea name="message" id="message" cols="30" rows="10"></textarea>
@@ -123,11 +126,29 @@
                     <i class="fas fa-exclamation"></i>
                     <small></small>
                 </div>
+
                 <div class="btn">
-                    <input type="button" value="Send">
+                    <button id="button">Send</button>
                 </div>
             </form>
-            <div class="contact__map hide-for-mobile" id="map">
+            <div class="contact__map hide-for-mobile" id="map"></div>
+            <div class="contact__modalOL flex flex-jc-c flex-ai-c">
+                <div class="modal flex flex-ai-c">
+                    <div class="modal__close flex flex-ai-c">
+                        <i class="far fa-times-circle" id="closeBtn"></i>
+                    </div>
+
+                    <div class="modal__info">
+                        <h2>Thank you!</h2>
+                        <p>I will get back with you as soon as I can,<br> in the meantime check me out on...</p>
+                    </div>
+                    
+                    <div class="modal__socials flex flex-ai-c flex-jc-c">
+                        <a href="https://www.linkedin.com/in/cody-monroe-jones"><i class="fab fa-linkedin" id="icon"></i></a>
+                        <a href="https://github.com/CodyMonJones"><i class="fab fa-github" id="icon"></i></a>
+                        <a href="https://twitter.com/AyoMrJones1"><i class="fab fa-twitter" id="icon"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

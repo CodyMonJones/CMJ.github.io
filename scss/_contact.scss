@@ -17,7 +17,7 @@
             width: 120px;
             height: 2px;
             background: $green;
-            margin-bottom: 10px;
+            margin-bottom: 0.625rem;
         }
     }
     
@@ -98,9 +98,9 @@
 
         .btn {
             width: 100%;
-            margin-top: 10px;
+            margin-top: 0.625rem;
 
-            >input {
+            #button {
                 width: 100%;
                 height: 30px;
                 color: $black;
@@ -117,7 +117,7 @@
         grid-area: map;
         height: 90%;
         width: 100%;
-        border-radius: 10px;
+        border-radius: 0.625rem;
     }
 
     .valid {
@@ -146,5 +146,67 @@
             visibility: visible;
             color: red;
         }
+    }
+
+    &__modalOL {
+        background-color: rgba(255, 255, 255, 0.6);
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s opacity 0.5s;
+
+        .modal {
+            background-color: $black;
+            color: $green;
+            min-width: 25%;
+            height: 30%;
+            border-radius: 0.625rem;
+            flex-direction: column;
+
+            
+            &__close {
+                height: 15%;
+                width: 100%;
+                flex-direction: row;
+                justify-content: flex-end;
+
+                .fa-times-circle {
+                     font-size: 1.2rem;
+                     cursor: pointer;
+                     padding: 0.625rem;
+                }
+            }
+
+            &__info {
+                text-align: center;
+                margin: 0.625rem 3.125rem;
+            }
+
+            &__socials {
+                width: 100%;
+                
+
+                #icon {
+                    font-size: 1.2rem;
+                    transition: transform .3s ease;
+                    cursor: pointer;
+                    margin: 0 20px;
+                }
+                #icon:hover {
+                    color: $white;
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+
+    .active {
+        visibility: visible;
+        opacity: 1;
     }
 }
